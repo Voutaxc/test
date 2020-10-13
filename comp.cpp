@@ -5,7 +5,7 @@
 using namespace std;
  
 string key[6]={"BEGIN","END","FOR","IF","THEN","ELSE"}; 
-string outkey[6]={"Begin","End","For","If","Then","Else"}; 
+string outkey[7]={" LL","Begin","End","For","If","Then","Else"}; 
 string letter[1000];
 
 int length;
@@ -30,7 +30,7 @@ int isKey(string s){
  for(i=0;i<6;i++){
   if(s==key[i])
   {
-  	return i;
+  	return i+1;
   	
   }
    
@@ -83,7 +83,7 @@ string Num(string s,int n){
 }
  
  
-void TakeWord(){ //取单词 
+void TakeWord(){ 
  int k;
  
  for(num=0;num<length;)
@@ -158,7 +158,11 @@ else if(str==":")
 	     	num++;
 		 }
  else
-      break;
+ {
+ 	cout<<"Unknown"<<endl;
+ 	break;
+ }
+      
   }
  
  } 
@@ -169,18 +173,19 @@ int main(){
  int i,j;
  
  freopen("$input","r",stdin);
-
+ 
+ 
  length=0;
  while(cin>>w){
   if(w!=' '){
    letter[length]=w;
    length++;
-  } 
+  }
  }
  
  TakeWord();
 
- fclose(stdin);//关闭文件 
- 
+ fclose(stdin); 
+
  return 0;
 }
