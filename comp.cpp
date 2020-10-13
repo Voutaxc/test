@@ -181,12 +181,12 @@ int main(){
  char w;
  int i,j;
  
- freopen("$input","r",stdin);
+ freopen("in.txt","r",stdin);
  
  
  length=0;
  while(cin>>w){
-  if(w!=' '){
+  if(w!=' '&&w!='\r\n'&&w!='\t'){
    letter[length]=w;
    length++;
   }
