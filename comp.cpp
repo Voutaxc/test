@@ -104,6 +104,15 @@ if(isLetter(str))
  
 else if(isNum(str))
     {
+    if(str=="0")
+    {
+    	while(str=="0")
+    	{
+    	num++;
+    	str=letter[num];
+		}
+    	
+	}
      str1=Num(str,num);
      cout<<"Int("<<str1<<")"<<endl;
     continue;
