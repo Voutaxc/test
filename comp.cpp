@@ -168,7 +168,7 @@ int main(){
  char w;
  int i,j;
  
- freopen("in.txt","r",stdin);
+ freopen("$input","r",stdin);
 
  length=0;
  while(cin>>w){
