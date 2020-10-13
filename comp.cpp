@@ -105,7 +105,7 @@ if(isLetter(str))
 else if(isNum(str))
     {
      str1=Num(str,num);
-     cout<<"Num("<<str1<<")"<<endl;
+     cout<<"Int("<<str1<<")"<<endl;
     continue;
     }
 
