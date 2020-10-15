@@ -90,10 +90,11 @@ void TakeWord(){
  {
   string str1,str,st;
   str=letter[num];
-  
-if(isLetter(str))
+if(str=="$")
+num++;
+else if(isLetter(str))
 {
-   
+    
      str1=ident(str,num);
      if(isKey(str1)!=0)
        cout<<outkey[isKey(str1)]<<endl;
@@ -182,11 +183,15 @@ int main(){
  int i,j;
  
  freopen("$input","r",stdin);
- 
- 
+ cin>>noskipws;//ÉèÖÃcin¶ÁÈ¡¿Õ°×·û£»
+
  length=0;
  while(cin>>w){
-  if(w!=' '&&w!='\r\n'&&w!='\t'){
+  if(w==' '||w=='\r\n'||w=='\t'||w=='\n'){
+   letter[length]="$";
+   length++;
+  }
+   else{
    letter[length]=w;
    length++;
   }
