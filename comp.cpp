@@ -181,7 +181,7 @@ int main(){
  char w;
  int i,j;
  
- freopen("$input","r",stdin);
+ freopen(argv[1],"r",stdin);
  
  
  length=0;
