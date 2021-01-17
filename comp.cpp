@@ -180,8 +180,7 @@ else if(str==":")
 int main(){
  char w;
  int i,j;
- 
- freopen(argv[1],"r",stdin);
+
  
  
  length=0;
