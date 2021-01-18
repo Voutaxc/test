@@ -90,13 +90,13 @@ void TakeWord(){
  {
   string str1,str,st;
   str=letter[num];
-  if(str=="$")
+  while(str=="$")
   {
   	 num++;
   	 str=letter[num];
   }
  
-else if(isLetter(str))
+ if(isLetter(str))
 {
     
      str1=ident(str,num);
@@ -111,7 +111,7 @@ else if(isNum(str))
     {
     if(str=="0")
     {
-    	while(str=="0")
+    	while(str=="0"&&isNum(letter[num+1]))
     	{
     	num++;
     	str=letter[num];
@@ -185,7 +185,7 @@ else if(str==":")
 int main(){
  char w;
  int i,j;
- //freopen("input.txt","r",stdin);
+
  cin>>noskipws;
 
  length=0;
@@ -199,7 +199,8 @@ int main(){
    length++;
   }
  }
- 
+ for(int i=0;i<length;i++)
+ 	cout<<letter[i];
  TakeWord();
 
 
