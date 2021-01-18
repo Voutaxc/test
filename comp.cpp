@@ -90,8 +90,12 @@ void TakeWord(){
  {
   string str1,str,st;
   str=letter[num];
-if(str=="$")
-num++;
+  if(str=="$")
+  {
+  	 num++;
+  	 str=letter[num];
+  }
+ 
 else if(isLetter(str))
 {
     
@@ -181,7 +185,7 @@ else if(str==":")
 int main(){
  char w;
  int i,j;
-
+ //freopen("input.txt","r",stdin);
  cin>>noskipws;
 
  length=0;
