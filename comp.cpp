@@ -90,13 +90,17 @@ void TakeWord(){
  {
   string str1,str,st;
   str=letter[num];
-  while(str=="$")
+  if(str=="$")
+  {
+  	while(str=="$")
   {
   	 num++;
   	 str=letter[num];
   }
  
- if(isLetter(str))
+  }
+
+ else if(isLetter(str))
 {
     
      str1=ident(str,num);
@@ -199,6 +203,7 @@ int main(){
    length++;
   }
  }
+
  TakeWord();
 
 
